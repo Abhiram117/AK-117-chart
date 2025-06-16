@@ -1,29 +1,50 @@
-
 body {
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background-color: #f1f1f1;
+  margin: 30px;
+  background: #f0f0f0;
 }
-.container {
-  text-align: center;
+
+.calculator {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #aaa;
 }
-#calculator, #chat {
-  margin-top: 20px;
+
+#calc-display {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 5px;
 }
+
 .buttons button {
-  width: 50px;
-  height: 50px;
-  margin: 2px;
+  width: 45px;
+  height: 45px;
+  margin: 4px;
+  font-size: 18px;
+  border-radius: 5px;
 }
-#messages {
-  height: 200px;
-  width: 300px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  margin: 10px auto;
-  padding: 10px;
+
+.chat-container {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 400px;
   background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+}
+
+#messages {
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
 }

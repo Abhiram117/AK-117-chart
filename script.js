@@ -1,37 +1,34 @@
+let display = document.getElementById('calc-display');
 
-const secretPIN = "117117";
-
-function checkPIN() {
-  const pin = document.getElementById("pin").value;
-  if (pin === secretPIN) {
-    document.getElementById("calculator").style.display = "none";
-    document.getElementById("chat").style.display = "block";
+function press(val) {
+  if (val === '=') {
+    if (display.value === 'AK117') {
+      document.querySelector('.calculator').style.display = 'none';
+      document.getElementById('chat').style.display = 'block';
+    } else {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = 'Error';
+      }
+    }
   } else {
-    alert("Wrong PIN!");
+    display.value += val;
   }
 }
 
-function appendValue(val) {
-  document.getElementById("display").value += val;
-}
-
 function clearDisplay() {
-  document.getElementById("display").value = "";
-}
-
-function calculate() {
-  const result = eval(document.getElementById("display").value);
-  document.getElementById("display").value = result;
+  display.value = '';
 }
 
 function sendMessage() {
-  const input = document.getElementById("msgInput");
-  const message = input.value.trim();
-  if (message) {
-    const chat = document.getElementById("messages");
-    const msgElement = document.createElement("div");
-    msgElement.textContent = "You: " + message;
-    chat.appendChild(msgElement);
-    input.value = "";
+  const input = document.getElementById('msgInput');
+  const msg = input.value.trim();
+  if (msg !== '') {
+    const div = document.createElement('div');
+    div.textContent = `You: ${msg}`;
+    document.getElementById('messages').appendChild(div);
+    input.value = '';
+    document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
   }
 }
