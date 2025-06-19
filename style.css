@@ -1,0 +1,6 @@
+
+body { font-family: Arial; text-align: center; background: #f0f0f0; }
+#chat-box { border: 1px solid #ccc; width: 90%; max-height: 300px; overflow-y: auto; margin: 10px auto; padding: 10px; background: #fff; }
+#chat-box div { margin-bottom: 10px; }
+img.chat-img { max-width: 200px; display: block; margin: 5px auto; }
+a { color: blue; text-decoration: underline; }

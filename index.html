@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+
+  <div id="calculator" style="display:none;">
+    <h2>Calculator</h2>
+    <input type="text" id="calc-display" readonly />
+    <div id="calc-buttons">
+      <button onclick="press('1')">1</button>
+      <button onclick="press('2')">2</button>
+      <button onclick="press('3')">3</button>
+      <button onclick="press('+')">+</button><br/>
+      <button onclick="press('4')">4</button>
+      <button onclick="press('5')">5</button>
+      <button onclick="press('6')">6</button>
+      <button onclick="press('-')">-</button><br/>
+      <button onclick="press('7')">7</button>
+      <button onclick="press('8')">8</button>
+      <button onclick="press('9')">9</button>
+      <button onclick="press('*')">*</button><br/>
+      <button onclick="press('0')">0</button>
+      <button onclick="clearCalc()">C</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="press('/')">/</button><br/>
+      <button onclick="checkPIN()">OK</button>
+    </div>
+  </div>
+
+  <div id="chat" style="display:none;">
+    <h2>💬 AK117 Secret Chat</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="chat-input" placeholder="Type your message..." oninput="translateWord()" />
+    <button onclick="sendMessage()">Send</button>
+    <div id="translator-box"></div>
+    <br>
+    <input type="file" accept="image/*" onchange="sendImage(event)" />
+    <br>
+    <button onclick="startRecording()">🎤 Record Voice</button>
+    <button onclick="stopRecording()">⏹️ Stop</button>
+    <audio id="voice" controls style="display:none;"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
