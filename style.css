@@ -1,0 +1,23 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.password-screen, .calculator, .chat-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.calc-display {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.buttons button, .chat-screen button {
+  margin: 5px;
+  padding: 10px 20px;
+}
