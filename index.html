@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AK117 Secret Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- STEP 1 – PASSWORD -->
+  <div class="view" id="passwordView">
+    <h2>Enter Password</h2>
+    <input type="password" id="pw" placeholder="AK117" />
+    <button onclick="unlockPW()">Unlock</button>
+    <p id="pwMsg"></p>
+  </div>
+
+  <!-- STEP 2 – CALCULATOR -->
+  <div class="view" id="calcView">
+    <div id="calcDisplay">0</div>
+    <div id="btns"></div>
+    <button class="goChat" onclick="checkCalc()">→</button>
+    <p id="calcMsg"></p>
+  </div>
+
+  <!-- STEP 3 – INSTAGRAM-STYLE CHAT -->
+  <div class="view" id="chatView">
+    <header><span class="title">AKSGR 💖</span></header>
+
+    <div id="chatBox"></div>
+
+    <footer>
+      <input id="chatInput" placeholder="Message..."
+             onkeypress="if(event.key==='Enter')sendMsg()" />
+      <button onclick="startVoice()">🎤</button>
+      <button onclick="recordVoice()">🎙️</button>
+      <label class="imgBtn">📷
+        <input type="file" accept="image/*" onchange="sendImg(this)" hidden>
+      </label>
+      <button onclick="sendMsg()">➤</button>
+    </footer>
+
+    <audio id="player" controls style="display:none"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
