@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AK117 Chat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- PASSWORD -->
+  <div class="screen" id="pwScreen">
+    <h1>🔒 Secret Access</h1>
+    <input type="password" id="pwInput" placeholder="Enter Password"/>
+    <button onclick="unlockPW()">Unlock</button>
+    <p id="pwMsg"></p>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="screen" id="calcScreen">
+    <div id="display">0</div>
+    <div class="grid">
+      <button onclick="key('7')">7</button><button onclick="key('8')">8</button><button onclick="key('9')">9</button><button onclick="key('/')">÷</button>
+      <button onclick="key('4')">4</button><button onclick="key('5')">5</button><button onclick="key('6')">6</button><button onclick="key('*')">×</button>
+      <button onclick="key('1')">1</button><button onclick="key('2')">2</button><button onclick="key('3')">3</button><button onclick="key('-')">−</button>
+      <button onclick="key('0')">0</button><button onclick="key('.')">.</button><button onclick="unlockChat()">🔓</button><button onclick="key('+')">+</button>
+      <button onclick="clearDisp()">AC</button><button onclick="back()">⌫</button><button onclick="calc()">=</button>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="screen chat" id="chatScreen">
+    <div class="header">💬 AKSGR ❤️</div>
+    <div id="chatBox"></div>
+    <div class="chatBar">
+      <input type="file" accept="image/*" id="imgInput" onchange="sendImg()" />
+      <input type="text" id="msgInput" placeholder="Type a message..." />
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
